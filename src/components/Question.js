@@ -3,7 +3,7 @@ import React from 'react';
 const Question = ({ question, options, handleAnswer }) => {
   return (
     <div>
-      <h3 className='word'>{question}</h3>
+      <h1 className='word'>{question}</h1>
       <div className='options'>
       {options.map((option) => (
         <button className='option' key={option} onClick={() => handleAnswer(option)}>

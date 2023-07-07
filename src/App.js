@@ -49,7 +49,7 @@ const App = () => {
       setCurrentQuestion((prevQuestion) => prevQuestion + 1);
       setResult(null);
     } else {
-      console.log('Tüm sorular tamamlandı:', answers);
+      alert('Tüm sorular tamamlandı:', answers);
     }
   };
 
@@ -83,9 +83,9 @@ const App = () => {
   return (
     <div className='question'>
       {result && (
-        <div style={{ color: result === 'correct' ? 'green' : 'red' }}>
-          {result === 'correct' ? 'Doğru!' : 'Yanlış!'}
-          Doğru Cevap: {questions[currentQuestion].mean}
+        <div className='info' style={{ color: result === 'correct' ? 'green' : 'red' }}>
+          {result === 'correct' ? 'Doğru! ' : 'Yanlış! '}
+          Cevap: {questions[currentQuestion].mean}
         </div>
       )}
       {currentQuestion !== null && (
